@@ -1,6 +1,6 @@
 # cookie-experiment
 
-nginx experiment alter set-cookie domain
+nginx experiment to alter set-cookie's domain
 
 ## Purpose
 
