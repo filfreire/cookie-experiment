@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  cookie-setter:
+    build: .
+    container_name: cookie-setter
+    ports:
+      - "5000:5000"
+    restart: always
+    deploy:
+      update_config:
+        order: start-first
+    pull_policy: always
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - COOKIE_SETTER_DOMAIN=cookie-setter.lan
+    depends_on:
+      - cookie-setter
