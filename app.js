@@ -4,7 +4,9 @@ const app = express();
 app.get('/', (req, res) => {
   res.cookie('mycookie1', 'cookie_value', {
     domain: req.hostname,
-    httpOnly: false,
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: true
   });
 
   res.send('Hello, World!');
