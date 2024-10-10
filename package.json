@@ -1,16 +1,24 @@
 {
-  "name": "experiment",
+  "name": "cookie-experiment",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Filipe Freire",
+  "license": "GPL-3.0",
+  "description": "nginx experiment alter set-cookie domain",
   "dependencies": {
     "express": "^4.21.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filfreire/cookie-experiment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/filfreire/cookie-experiment/issues"
+  },
+  "homepage": "https://github.com/filfreire/cookie-experiment#readme"
 }
